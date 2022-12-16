@@ -1,0 +1,25 @@
+:host {
+    background: rgb(115, 175, 212);
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.logo {
+    flex: auto;
+}
+
+.menu {
+
+    
+}
+
+button {
+    margin: 10px;
+}
