@@ -5,6 +5,7 @@ import { HomeComponent } from 'src/app/modules/home/home.component';
 import { RouterModule } from '@angular/router';
 import { CustomerComponent } from 'src/app/modules/customer/customer.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { LoginComponent } from 'src/app/modules/login/login.component';
 
 
 
@@ -12,7 +13,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
   declarations: [
     DefaultComponent,
     HomeComponent,
-    CustomerComponent
+    CustomerComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
