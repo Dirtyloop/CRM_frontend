@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { CustomerComponent } from 'src/app/modules/customer/customer.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LoginComponent } from 'src/app/modules/login/login.component';
+import { AdminComponent } from 'src/app/modules/admin/admin.component';
 
 
 
@@ -14,7 +15,8 @@ import { LoginComponent } from 'src/app/modules/login/login.component';
     DefaultComponent,
     HomeComponent,
     CustomerComponent,
-    LoginComponent
+    LoginComponent,
+    AdminComponent
   ],
   imports: [
     CommonModule,
