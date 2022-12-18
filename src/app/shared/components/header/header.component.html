@@ -1,10 +1,12 @@
 <header>
-    <div class="logo">
-        logo
+    <div class="header">
+        <mat-icon class="folderIcon">folder_shared</mat-icon>
+        <span class="logo">{{title}}</span>
+        <mat-icon class="acIcon">ac_unit</mat-icon>
     </div>
     <div class="menu">
-        <button routerLink="">Home</button>
-        <button routerLink="/customers">Customers</button>
-        <button routerLink="/login">Login</button>
+        <button mat-button routerLink="">Home</button>
+        <button mat-button routerLink="/customers">Customers</button>
+        <button mat-button routerLink="/login">Login</button>
     </div>
 </header>

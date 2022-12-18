@@ -8,11 +8,22 @@ header {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    
+    height: auto;
+}
+
+.header {
+    flex: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    //height: 100px;
 }
 
 .logo {
-    flex: auto;
+    margin: 10px;
+    //padding: 10px;
+    font-size: 36px;
 }
 
 .menu {
@@ -22,4 +33,12 @@ header {
 
 button {
     margin: 10px;
+}
+
+.acIcon {
+    font-size: 24px;
+}
+
+.folderIcon {
+    font-size: 24px;
 }
