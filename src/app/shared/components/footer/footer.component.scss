@@ -1,9 +1,28 @@
+@import '../../../../variables.scss';
+
 :host {
-    background: rgb(24, 106, 157);
+    background: $footer_bgcolor;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     color: whitesmoke;
+}
+
+.footerCopy {
+    text-align: center;
+}
+.footerMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+    width: 800px;
+}
+.footerColumn {
+    width: 25%;
+    background: $header_bgcolor;
+    padding: 5px;
 }

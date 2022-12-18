@@ -1,5 +1,7 @@
+@import '../../../../variables.scss';
+
 :host {
-    background: rgb(115, 175, 212);
+    background: $header_bgcolor;
     padding: 20px;
 }
 
