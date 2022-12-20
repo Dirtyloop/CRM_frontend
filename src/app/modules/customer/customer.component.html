@@ -1,1 +1,52 @@
 <h1>Customers</h1>
+<mat-card *ngFor="let customer of customers">
+    <div class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{customer.name}}</mat-card-title>
+      <mat-card-subtitle>Private</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <img mat-card-image src="../../../assets/image-placeholder.png" alt="Sample image"> -->
+    <mat-card-content>
+        <!-- <div class="address">
+            <div>
+                Street
+            </div>
+            <div>
+                City
+            </div>
+        </div>
+        <div class="contact">
+            <div>
+                Telephone
+            </div>
+            <div>
+                Email
+            </div>
+        </div> -->
+        <div class="airConNumber">
+            <div class="littleText">
+                Air-conditioners
+            </div>
+            <div class="bigText">
+                {{customer.units}}
+            </div>
+        </div>
+        <div class="inspected">
+            <div class="littleText">
+                Inspected
+            </div>
+            <div class="bigText">
+                Yes
+            </div>
+        </div>
+    </mat-card-content>
+    
+    <mat-card-actions align="end">
+      <button mat-button>DETAILS</button>
+      <button mat-button>UNITS</button>
+      <button mat-button>DELETE</button>
+    </mat-card-actions>
+    </div>
+  </mat-card>
+  
