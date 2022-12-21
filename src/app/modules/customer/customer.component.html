@@ -8,15 +8,12 @@
     </mat-card-header>
     <!-- <img mat-card-image src="../../../assets/image-placeholder.png" alt="Sample image"> -->
     <mat-card-content>
-        <!-- <div class="address">
-            <div>
-                Street
-            </div>
-            <div>
-                City
+        <div class="address">
+            <div class="bigText">
+                {{customer.city}}
             </div>
         </div>
-        <div class="contact">
+        <!-- <div class="contact">
             <div>
                 Telephone
             </div>
@@ -37,15 +34,17 @@
                 Inspected
             </div>
             <div class="bigText">
-                Yes
+                {{customer.inspected ? "Yes" : "No"}}
             </div>
         </div>
     </mat-card-content>
     
     <mat-card-actions align="end">
+        <div class="actionButtons">
       <button mat-button>DETAILS</button>
       <button mat-button>UNITS</button>
       <button mat-button>DELETE</button>
+    </div>
     </mat-card-actions>
     </div>
   </mat-card>
