@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Customer } from './model/customer';
 
 @Injectable({
@@ -6,41 +8,10 @@ import { Customer } from './model/customer';
 })
 export class CustomerService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getCustomer(): Customer[] {
-    return [
-      {
-        name: "Jan Nowak",
-        company: "",
-        nip: "",
-        street: "Porzeczkowa 13",
-        postalCode: "80-333",
-        city: "Gdańsk",
-        units: 2,
-        inspected: false
-      },
-      {
-        name: "Misionel Lessi",
-        company: "Lessi",
-        nip: "5558882324",
-        street: "Jabłuszkowa 5",
-        postalCode: "80-444",
-        city: "Gdańsk",
-        units: 1,
-        inspected: false
-      },
-      {
-        name: "Krystyna Ronaldo",
-        company: "",
-        nip: "",
-        street: "Cierpka 2",
-        postalCode: "80-222",
-        city: "Gdańsk",
-        units: 3,
-        inspected: true
-      }
-    ];
+  getCustomer(): Observable<Customer[]> {
+    return this.http.get<Customer[]>("/api/customers");
   }
 
 }
