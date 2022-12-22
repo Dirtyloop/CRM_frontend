@@ -18,7 +18,7 @@ ngOnInit(): void {
 }
 
 getCustomer() {
-  this.customers = this.customerService.getCustomer();
+  this.customerService.getCustomer().subscribe(customers => this.customers = customers);
 }
 
 }
