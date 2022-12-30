@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    flex: 1 1 auto;
+    //height: 600px;
+    
+}
+
+.adminMenu {
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    align-items: center;
+}

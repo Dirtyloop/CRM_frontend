@@ -1,0 +1,11 @@
+<app-header flex-direction="column"></app-header>
+<div class="adminMenu">
+    <div>
+        <button mat-button routerLink="/admin">Dashboard</button>
+        <button mat-button routerLink="/admin/customers">Customers</button>
+        <button mat-button routerLink="/">Shop</button>
+    </div>
+</div>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
