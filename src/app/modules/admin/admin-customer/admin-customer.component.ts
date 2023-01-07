@@ -13,7 +13,7 @@ import { AdminCustomer } from './adminCustomer';
   styleUrls: ['./admin-customer.component.scss']
 })
 export class AdminCustomerComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'name', 'city', 'inspected'];
+  displayedColumns: string[] = ['id', 'name', 'city', 'inspected', 'actions'];
 
   dataSource: AdminCustomer[] = [];
 

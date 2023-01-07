@@ -42,6 +42,15 @@
           <th mat-header-cell *matHeaderCellDef mat-sort-header class="inspectedClass">Inspected</th>
           <td mat-cell *matCellDef="let element">{{element.inspected}}</td>
         </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="actionsClass">Actions</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-icon-button [routerLink]="['/admin/customers/update', element.id]">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </td>
+        </ng-container>
   
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
