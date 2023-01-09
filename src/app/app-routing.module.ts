@@ -7,6 +7,7 @@ import { AdminComponent } from './modules/admin/admin.component';
 import { CustomerComponent } from './modules/customer/customer.component';
 import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/login/login.component';
+import { AdminCustomerUpdateComponent } from './modules/admin/admin-customer-update/admin-customer-update.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
   {
     path:'', component: AdminLayoutComponent, children: [
       {path: 'admin', component: AdminComponent},
-      {path: 'admin/customers', component: AdminCustomerComponent}
+      {path: 'admin/customers', component: AdminCustomerComponent},
+      {path: 'admin/customers/update/:id', component: AdminCustomerUpdateComponent}
     ]
   }
 ];
