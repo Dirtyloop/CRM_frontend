@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminLayoutComponent } from './admin-layout.component';
 import { AdminCustomerUpdateComponent } from 'src/app/modules/admin/admin-customer-update/admin-customer-update.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AdminCustomerUpdateComponent } from 'src/app/modules/admin/admin-custom
   imports: [
     CommonModule,
     RouterModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class AdminLayoutModule { }
