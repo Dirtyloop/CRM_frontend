@@ -5,13 +5,15 @@ import { AdminCustomerComponent } from 'src/app/modules/admin/admin-customer/adm
 import { RouterModule } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminLayoutComponent } from './admin-layout.component';
+import { AdminCustomerUpdateComponent } from 'src/app/modules/admin/admin-customer-update/admin-customer-update.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     AdminCustomerComponent,
-    AdminLayoutComponent
+    AdminLayoutComponent,
+    AdminCustomerUpdateComponent
   ],
   imports: [
     CommonModule,
