@@ -13,4 +13,8 @@ export class AdminCustomerUpdateService {
   getCustomer(id: number): Observable<AdminCustomerUpdate> {
     return this.http.get<AdminCustomerUpdate>("/api/admin/customers/" + id);
   }
+
+  saveCustomer(id: number, value: AdminCustomerUpdate) {
+    return this.http.put<AdminCustomerUpdate>('/api/admin/customers/' + id, value);
+  }
 }

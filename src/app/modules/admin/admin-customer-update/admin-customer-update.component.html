@@ -1,6 +1,6 @@
 <h1>Update Customer</h1>
 
-<form class="update_form" [formGroup]="customerForm">
+<form class="update_form" [formGroup]="customerForm" (ngSubmit)="onSaveClick()">
     <div class="customer_info">
         <div class="customer_data">
             <mat-form-field class="example-full-width" appearance="fill">
@@ -65,6 +65,7 @@
     </div>
 
     <div align="end">
-        <button mat-flat-button>Save</button>
+        <button mat-flat-button type="submit">Save</button>
+        <button mat-flat-button routerLink="/admin/customers">Cancel</button>
     </div>
 </form>
