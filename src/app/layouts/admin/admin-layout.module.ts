@@ -7,6 +7,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { AdminLayoutComponent } from './admin-layout.component';
 import { AdminCustomerUpdateComponent } from 'src/app/modules/admin/admin-customer-update/admin-customer-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AdminCustomerAddComponent } from 'src/app/modules/admin/admin-customer-add/admin-customer-add.component';
+import { AdminCustomerFormComponent } from 'src/app/modules/admin/admin-customer-form/admin-customer-form.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminComponent,
     AdminCustomerComponent,
     AdminLayoutComponent,
-    AdminCustomerUpdateComponent
+    AdminCustomerUpdateComponent,
+    AdminCustomerAddComponent,
+    AdminCustomerFormComponent
   ],
   imports: [
     CommonModule,
