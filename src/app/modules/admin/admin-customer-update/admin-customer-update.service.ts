@@ -15,6 +15,6 @@ export class AdminCustomerUpdateService {
   }
 
   saveCustomer(id: number, value: AdminCustomerUpdate) {
-    return this.http.put<AdminCustomerUpdate>('/api/admin/customers/' + id, value);
+    return this.http.put<AdminCustomerUpdate>("/api/admin/customers/" + id, value);
   }
 }
