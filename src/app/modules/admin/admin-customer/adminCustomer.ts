@@ -7,5 +7,5 @@ export interface AdminCustomer {
     postalCode: string,
     city: string,
     units: number,
-    inspected: boolean
+    inspected: string
 }
