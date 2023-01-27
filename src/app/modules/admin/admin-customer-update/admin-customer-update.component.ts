@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AdminCustomerUpdateService } from './admin-customer-update.service';
 import { AdminCustomerUpdate } from './model/adminCustomerUpdate';
 
@@ -17,7 +17,8 @@ export class AdminCustomerUpdateComponent implements OnInit {
   durationInSeconds = 3;
 
   constructor(
-    private router: ActivatedRoute,
+    private activatedRouter: ActivatedRoute,
+    private router: Router,
     private adminCustomerUpdateService: AdminCustomerUpdateService,
     private formBuilder: FormBuilder,
     private snackBar: MatSnackBar
@@ -39,16 +40,16 @@ export class AdminCustomerUpdateComponent implements OnInit {
   }
 
   getCustomer() {
-    let id = Number(this.router.snapshot.params['id']);
+    let id = Number(this.activatedRouter.snapshot.params['id']);
     this.adminCustomerUpdateService.getCustomer(id)
     .subscribe(customer => this.mapFormValues(customer));
   }
 
   onSaveClick() {
-    let id = Number(this.router.snapshot.params['id']);
+    let id = Number(this.activatedRouter.snapshot.params['id']);
     this.adminCustomerUpdateService.saveCustomer(id, this.customerForm.value).subscribe(customer => {
-      this.mapFormValues(customer);
-      this.snackBar.open("Customer saved", '', {duration: this.durationInSeconds*1000});
+      this.router.navigate(["/admin/customers"])
+        .then(() => this.snackBar.open("Customer saved", 'Updated', {duration: this.durationInSeconds*1000}))
     });
   }
 

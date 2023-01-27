@@ -1,0 +1,26 @@
+.messages {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: whitesmoke;
+    border: 2px;
+    border-style:dashed;
+    border-color: firebrick;
+    font-size: 20px;
+    color: firebrick;
+    div{
+        margin-bottom: 4px;
+    }
+    button{
+        color: firebrick;
+    }
+}
+
+.text {
+    flex: 1;
+}
+
+.clearMessages {
+    align-self: flex-end;
+}
