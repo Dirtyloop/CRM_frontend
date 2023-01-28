@@ -69,7 +69,7 @@ import { FormGroup } from "@angular/forms";
         </mat-form-field>
     </div>
     <div align="end">
-        <button mat-flat-button type="submit">Save</button>
+        <button mat-flat-button type="submit" [disabled]="!parentForm.valid">Save</button>
         <button mat-flat-button routerLink="/admin/customers">Cancel</button>
     </div>
 </div>`,

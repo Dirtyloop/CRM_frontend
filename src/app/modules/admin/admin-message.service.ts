@@ -24,13 +24,17 @@ export class AdminMessageService {
 
   addSpringErrors(error: any): void {
     this.clear();
-    if(error.errors?.length > 0) {
+    this.extractMessages(error);
+    this.subject.next(this.messages);
+  }
+
+  private extractMessages(error: any) {
+    if (error.errors?.length > 0) {
       for (let message of error.errors) {
         this.messages.push("Field " + message.field + " -> " + message.defaultMessage);
       }
     } else {
       this.messages.push(error.message);
     }
-    this.subject.next(this.messages);
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AdminMessageService } from '../admin-message.service';
@@ -26,14 +26,14 @@ export class AdminCustomerAddComponent implements OnInit {
   ngOnInit(): void {
 
     this.customerForm = this.formBuilder.group({
-      name: [''],
+      name: ['', [Validators.required, Validators.minLength(3)]],
       company: [''],
       nip: [''],
-      street: [''],
-      postalCode: [''],
-      city: [''],
-      units: [''],
-      inspected: ['']
+      street: ['', [Validators.required, Validators.minLength(3)]],
+      postalCode: ['', [Validators.required, Validators.minLength(3)]],
+      city: ['', [Validators.required, Validators.minLength(3)]],
+      units: ['', [Validators.required, Validators.min(0)]],
+      inspected: ['', Validators.required]
     })
   }
 
