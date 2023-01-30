@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, PatternValidator, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AdminMessageService } from '../admin-message.service';
@@ -30,10 +30,10 @@ export class AdminCustomerAddComponent implements OnInit {
       company: [''],
       nip: [''],
       street: ['', [Validators.required, Validators.minLength(3)]],
-      postalCode: ['', [Validators.required, Validators.minLength(3)]],
+      postalCode: ['', [Validators.required, Validators.pattern('[0-9]{2}-[0-9]{3}')]],
       city: ['', [Validators.required, Validators.minLength(3)]],
       units: ['', [Validators.required, Validators.min(0)]],
-      inspected: ['', Validators.required]
+      inspected: ['', [Validators.required, Validators.pattern('^(?:YES|NO)$')]]
     })
   }
 

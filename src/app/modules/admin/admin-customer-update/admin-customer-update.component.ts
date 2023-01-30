@@ -34,10 +34,10 @@ export class AdminCustomerUpdateComponent implements OnInit {
       company: [''],
       nip: [''],
       street: ['', [Validators.required, Validators.minLength(3)]],
-      postalCode: ['', [Validators.required, Validators.minLength(3)]],
+      postalCode: ['', [Validators.required, Validators.pattern('[0-9]{2}-[0-9]{3}')]],
       city: ['', [Validators.required, Validators.minLength(3)]],
       units: ['', [Validators.required, Validators.min(0)]],
-      inspected: ['', Validators.required]
+      inspected: ['', [Validators.required, Validators.pattern('^(?:YES|NO)$')]]
     })
   }
 
