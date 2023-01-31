@@ -1,0 +1,15 @@
+<div class="dialogComponent">
+    <div class="dialogText">
+        <div>
+            <h1>{{data.header}}</h1>
+            <span>{{data.message}}</span>
+        </div>
+        <button mat-icon-button class="closeButton" [mat-dialog-close]="false">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="dialogButtons">
+        <button mat-flat-button [mat-dialog-close]="true">{{data.button}}</button>
+        <button mat-flat-button [mat-dialog-close]="false">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.dialogComponent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dialogText {
+    display: flex;
+    padding-bottom: 50px;
+    flex-direction: row;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+.dialogButtons {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex-direction: row;
+    //align-content: center;
+}
+
+.closeButton {
+    margin-top: -15px;
+    margin-right: -15px;
+}

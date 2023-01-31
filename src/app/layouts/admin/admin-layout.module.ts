@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AdminCustomerAddComponent } from 'src/app/modules/admin/admin-customer-add/admin-customer-add.component';
 import { AdminCustomerFormComponent } from 'src/app/modules/admin/admin-customer-form/admin-customer-form.component';
 import { AdminMessageComponent } from 'src/app/modules/admin/admin-message/admin-message.component';
+import { AdminConfirmDialogComponent } from 'src/app/modules/admin/admin-confirm-dialog/admin-confirm-dialog.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AdminMessageComponent } from 'src/app/modules/admin/admin-message/admin
     AdminCustomerUpdateComponent,
     AdminCustomerAddComponent,
     AdminCustomerFormComponent,
-    AdminMessageComponent
+    AdminMessageComponent,
+    AdminConfirmDialogComponent
   ],
   imports: [
     CommonModule,

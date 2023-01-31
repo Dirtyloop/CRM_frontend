@@ -1,8 +1,10 @@
 import {Component, ViewChild, AfterViewInit} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort, SortDirection} from '@angular/material/sort';
+import { MatTable } from '@angular/material/table';
 import {merge, Observable, of as observableOf} from 'rxjs';
 import {catchError, map, startWith, switchMap} from 'rxjs/operators';
+import { AdminConfirmDialogService } from '../admin-confirm-dialog.service';
 import { AdminCustomerService } from './admin-customer.service';
 import { AdminCustomer } from './adminCustomer';
 
@@ -24,9 +26,12 @@ export class AdminCustomerComponent implements AfterViewInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatTable) table!: MatTable<any>;
 
-
-  constructor(private adminCustomerService: AdminCustomerService) {}
+  constructor(
+    private adminCustomerService: AdminCustomerService,
+    private dialogService: AdminConfirmDialogService
+    ) {}
 
   ngAfterViewInit() {
     
@@ -72,4 +77,22 @@ export class AdminCustomerComponent implements AfterViewInit {
   //     this.paginator.firstPage();
   //   }
   // }
+
+  confirmDelete(element: AdminCustomer) {
+    this.dialogService.openConfirmDialog("Delete Customer", "Do you want to delete this Customer?", "Delete")
+    .afterClosed()
+    .subscribe(result => {
+      if(result) {
+        this.adminCustomerService.delete(element.id)
+        .subscribe(() => {
+          this.dataSource.forEach((value, index) => {
+            if(element == value) {
+              this.dataSource.splice(index, 1);
+              this.table.renderRows();
+            }
+          })
+        });
+      }
+    });
+  }
 }
