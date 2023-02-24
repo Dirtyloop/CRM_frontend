@@ -1,4 +1,4 @@
-# CRM system for AC company - backend
+# CRM system for AC company - frontend
 
 ### Database of customers and installations for my air-conditioning company
 
