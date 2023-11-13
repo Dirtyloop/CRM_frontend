@@ -1,11 +1,14 @@
 <h1>Customers</h1>
 <mat-card *ngFor="let customer of page.content">
+    
     <div class="example-card">
+        
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{customer.name}}</mat-card-title>
+            <mat-card-title><a routerLink="{{'/customers' + customer.id}}">{{customer.name}}</a></mat-card-title>
             <mat-card-subtitle>Private</mat-card-subtitle>
         </mat-card-header>
+        
         <mat-card-content>
             <div class="address">
                 <div class="bigText">
@@ -32,7 +35,7 @@
 
         <mat-card-actions align="end">
             <div class="actionButtons">
-                <button mat-button>DETAILS</button>
+                <a routerLink="{{'/customers' + customer.id}}"><button mat-button>DETAILS</button></a>
                 <button mat-button>UNITS</button>
                 <button mat-button>DELETE</button>
             </div>
