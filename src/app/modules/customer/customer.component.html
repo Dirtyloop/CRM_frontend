@@ -5,7 +5,7 @@
         
         <mat-card-header>
             <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title><a routerLink="{{'/customers' + customer.id}}">{{customer.name}}</a></mat-card-title>
+            <mat-card-title><a routerLink="{{'/customers/' + customer.id}}">{{customer.name}}</a></mat-card-title>
             <mat-card-subtitle>Private</mat-card-subtitle>
         </mat-card-header>
         
@@ -35,7 +35,7 @@
 
         <mat-card-actions align="end">
             <div class="actionButtons">
-                <a routerLink="{{'/customers' + customer.id}}"><button mat-button>DETAILS</button></a>
+                <a routerLink="{{'/customers/' + customer.id}}"><button mat-button>DETAILS</button></a>
                 <button mat-button>UNITS</button>
                 <button mat-button>DELETE</button>
             </div>

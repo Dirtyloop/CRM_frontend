@@ -9,12 +9,14 @@ import { HomeComponent } from './modules/home/home.component';
 import { LoginComponent } from './modules/login/login.component';
 import { AdminCustomerUpdateComponent } from './modules/admin/admin-customer-update/admin-customer-update.component';
 import { AdminCustomerAddComponent } from './modules/admin/admin-customer-add/admin-customer-add.component';
+import { CustomerDetailsComponent } from './modules/customer-details/customer-details.component';
 
 const routes: Routes = [
   {
     path:'', component: DefaultComponent, children: [
       {path: '', component: HomeComponent},
       {path: 'customers', component: CustomerComponent},
+      {path: 'customers/:id', component: CustomerDetailsComponent},
       {path: 'login', component: LoginComponent}
     ]
   },
