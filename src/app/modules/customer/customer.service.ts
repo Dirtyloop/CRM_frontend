@@ -14,5 +14,4 @@ export class CustomerService {
   getCustomer(page: number, size: number): Observable<Page<Customer>> {
     return this.http.get<Page<Customer>>(`/api/customers?page=${page}&size=${size}`);
   }
-
 }
