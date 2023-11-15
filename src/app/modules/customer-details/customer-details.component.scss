@@ -1,0 +1,105 @@
+// .customer-info {
+//     max-width: 800px;
+//   }
+
+  :host {
+    //background: #CCC;
+    padding: 20px;
+    height: 100%;
+}
+
+mat-card {
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.customer-info {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    align-content: center;
+
+}
+  
+.example-header-image {
+    background-image: url('../../../assets/header-image-placeholder.png');
+    background-size: cover;
+    margin-bottom: 0px;
+}
+
+mat-card-header {
+    display: flex;
+    padding: 0px;
+    width: 600px;
+}
+ button {
+    margin-left: 5px;
+ }
+
+mat-card-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 0px;
+    width: 100%;
+}
+
+mat-card-actions {
+    height: 100%;
+    padding: 0px;
+    min-width: none;
+}
+
+.mdc-card__actions {
+    min-height: 0px;
+}
+
+.actionButtons {
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    flex-direction: row;
+    align-content:center;
+}
+
+.address {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content:center;
+}
+
+// .contact {
+//     width: 200px;
+// }
+
+.airConNumber {
+    width: 200px;
+}
+
+.inspected {
+    width: 200px;
+}
+
+.littleText {
+    display: flex;
+    justify-content: center;
+}
+
+.bigText {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color:#CCC;
+}
