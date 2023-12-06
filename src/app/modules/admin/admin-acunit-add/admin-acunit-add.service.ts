@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AdminCustomerUpdate } from '../admin-customer-update/model/adminCustomerUpdate';
+import { AdminAcunitUpdate } from '../admin-acunit-update/model/adminAcunitUpdate';
 
 @Injectable({
   providedIn: 'root'

@@ -15,7 +15,6 @@ export class AdminCustomerUpdateComponent implements OnInit {
 
   customer!: AdminCustomerUpdate;
   customerForm!: FormGroup;
-  acunitForm!: FormGroup;
   durationInSeconds = 3;
 
   constructor(

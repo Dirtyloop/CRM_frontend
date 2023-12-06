@@ -1,4 +1,4 @@
-export interface AdminAcunit {
+export interface AdminAcunitUpdate {
     id: number,
     model: string,
     power: number,

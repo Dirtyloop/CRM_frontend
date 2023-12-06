@@ -13,6 +13,7 @@ import { AdminMessageComponent } from 'src/app/modules/admin/admin-message/admin
 import { AdminConfirmDialogComponent } from 'src/app/modules/admin/admin-confirm-dialog/admin-confirm-dialog.component';
 import { AdminAcunitFormComponent } from 'src/app/modules/admin/admin-acunit-form/admin-acunit-form.component';
 import { AdminAcunitAddComponent } from 'src/app/modules/admin/admin-acunit-add/admin-acunit-add.component';
+import { AdminAcunitUpdateComponent } from 'src/app/modules/admin/admin-acunit-update/admin-acunit-update.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { AdminAcunitAddComponent } from 'src/app/modules/admin/admin-acunit-add/
     AdminMessageComponent,
     AdminConfirmDialogComponent,
     AdminAcunitFormComponent,
-    AdminAcunitAddComponent
+    AdminAcunitAddComponent,
+    AdminAcunitUpdateComponent
   ],
   imports: [
     CommonModule,
