@@ -69,27 +69,41 @@
     
     <div class="units_info">
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Units</mat-label>
-            <input matInput #unitsInput maxlength="2" placeholder="Number of units" formControlName="units">
-            <div *ngIf="units?.invalid && (units?.dirty || units?.touched)">
-                <div *ngIf="units?.errors?.['required'] || units?.errors?.['min']">
-                    Units is required
+            <mat-label>Model</mat-label>
+            <input matInput #modelInput maxlength="32" placeholder="Model of the unit" formControlName="model">
+            <div *ngIf="model?.invalid && (model?.dirty || model?.touched)">
+                <div *ngIf="model?.errors?.['required'] || model?.errors?.['min']">
+                    Model is required
                 </div>
             </div>
-            <mat-hint align="start"><strong>Number of units</strong> </mat-hint>
-            <mat-hint align="end">{{unitsInput.value.length}} / {{unitsInput.maxLength}}</mat-hint>
+            <mat-hint align="start"><strong>AC Model</strong> </mat-hint>
+            <mat-hint align="end">{{modelInput.value.length}} / {{modelInput.maxLength}}</mat-hint>
         </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Power</mat-label>
+                <input matInput #powerInput maxlength="10" placeholder="Power of the unit" formControlName="power">
+                <mat-hint align="start"><strong>Power of the unit</strong> </mat-hint>
+                <mat-hint align="end">{{powerInput.value.length}} / {{powerInput.maxLength}}</mat-hint>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Serial number</mat-label>
+                <input matInput #serialInput maxlength="16" placeholder="Serial number of the unit" formControlName="serial">
+                <mat-hint align="start"><strong>Serial number of the unit</strong> </mat-hint>
+                <mat-hint align="end">{{serialInput.value.length}} / {{serialInput.maxLength}}</mat-hint>
+            </mat-form-field>
     
         <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Inspected</mat-label>
-            <input matInput #inspectedInput maxlength="3" placeholder="Inspected" formControlName="inspected">
-            <div *ngIf="inspected?.invalid && (inspected?.dirty || inspected?.touched)">
-                    <div *ngIf="inspected?.errors?.['required'] || inspected?.errors?.['pattern']">
+            <mat-label>Instal Date</mat-label>
+            <input matInput #instalDateInput maxlength="10" placeholder="Instal Date" formControlName="instalDate">
+            <div *ngIf="instalDate?.invalid && (instalDate?.dirty || instalDate?.touched)">
+                    <div *ngIf="instalDate?.errors?.['required'] || instalDate?.errors?.['pattern']">
                         Inspected (YES or NO) is required
                     </div>
                 </div>
-            <mat-hint align="start"><strong>Inspected</strong> </mat-hint>
-            <mat-hint align="end">{{inspectedInput.value.length}} / {{inspectedInput.maxLength}}</mat-hint>
+            <mat-hint align="start"><strong>Instal Date</strong> </mat-hint>
+            <mat-hint align="end">{{instalDateInput.value.length}} / {{instalDateInput.maxLength}}</mat-hint>
         </mat-form-field>
     </div>
     <div align="end">

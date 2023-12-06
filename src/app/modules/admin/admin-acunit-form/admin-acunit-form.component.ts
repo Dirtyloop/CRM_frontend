@@ -14,27 +14,19 @@ export class AdminAcunitFormComponent implements OnInit {
 
     }
 
-    get name(){
-        return this.parentForm.get("name");
+    get model(){
+        return this.parentForm.get("model");
     }
 
-    get street(){
-        return this.parentForm.get("street");
+    get power(){
+        return this.parentForm.get("power");
     }
 
-    get postalCode(){
-        return this.parentForm.get("postalCode");
+    get serial(){
+        return this.parentForm.get("serial");
     }
 
-    get city(){
-        return this.parentForm.get("city");
-    }
-
-    get units(){
-        return this.parentForm.get("units");
-    }
-
-    get inspected(){
-        return this.parentForm.get("inspected");
+    get instalDate(){
+        return this.parentForm.get("instalDate");
     }
 }
