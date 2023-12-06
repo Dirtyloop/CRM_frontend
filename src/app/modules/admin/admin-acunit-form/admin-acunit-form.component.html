@@ -72,7 +72,7 @@
             <mat-label>Model</mat-label>
             <input matInput #modelInput maxlength="32" placeholder="Model of the unit" formControlName="model">
             <div *ngIf="model?.invalid && (model?.dirty || model?.touched)">
-                <div *ngIf="model?.errors?.['required'] || model?.errors?.['min']">
+                <div *ngIf="model?.errors?.['required'] || model?.errors?.['minLength']">
                     Model is required
                 </div>
             </div>
@@ -89,9 +89,9 @@
 
             <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Serial number</mat-label>
-                <input matInput #serialInput maxlength="16" placeholder="Serial number of the unit" formControlName="serial">
+                <input matInput #serialNumberInput maxlength="16" placeholder="Serial number of the unit" formControlName="serialNumber">
                 <mat-hint align="start"><strong>Serial number of the unit</strong> </mat-hint>
-                <mat-hint align="end">{{serialInput.value.length}} / {{serialInput.maxLength}}</mat-hint>
+                <mat-hint align="end">{{serialNumberInput.value.length}} / {{serialNumberInput.maxLength}}</mat-hint>
             </mat-form-field>
     
         <mat-form-field class="example-full-width" appearance="fill">
@@ -99,12 +99,13 @@
             <input matInput #instalDateInput maxlength="10" placeholder="Instal Date" formControlName="instalDate">
             <div *ngIf="instalDate?.invalid && (instalDate?.dirty || instalDate?.touched)">
                     <div *ngIf="instalDate?.errors?.['required'] || instalDate?.errors?.['pattern']">
-                        Inspected (YES or NO) is required
+                        Instal Date (YYYY-MM-DD) is required
                     </div>
                 </div>
             <mat-hint align="start"><strong>Instal Date</strong> </mat-hint>
             <mat-hint align="end">{{instalDateInput.value.length}} / {{instalDateInput.maxLength}}</mat-hint>
         </mat-form-field>
+        <input type="hidden" #customerIdInput formControlName="customerId">
     </div>
     <div align="end">
         <button mat-flat-button type="submit" [disabled]="!parentForm.valid">Save</button>

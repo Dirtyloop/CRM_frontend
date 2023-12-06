@@ -32,7 +32,7 @@ export class AdminAcunitUpdateComponent implements OnInit {
     this.acunitForm = this.formBuilder.group({
       model: ['', [Validators.required, Validators.minLength(3)]],
       power: [''],
-      serial: [''],
+      serialNumber: [''],
       instalDate: ['', [Validators.required, Validators.pattern('^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$')]]
     })
   }
@@ -58,8 +58,8 @@ export class AdminAcunitUpdateComponent implements OnInit {
     return this.acunitForm.setValue({
       model: acunit.model,
       power: acunit.power,
-      serial: acunit.serial,
-      instalDate: acunit.instalDate,
+      serialNumber: acunit.serialNumber,
+      instalDate: acunit.instalDate
     });
   }
 

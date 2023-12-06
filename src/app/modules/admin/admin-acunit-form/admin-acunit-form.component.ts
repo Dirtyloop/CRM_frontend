@@ -22,11 +22,15 @@ export class AdminAcunitFormComponent implements OnInit {
         return this.parentForm.get("power");
     }
 
-    get serial(){
-        return this.parentForm.get("serial");
+    get serialNumber(){
+        return this.parentForm.get("serialNumber");
     }
 
     get instalDate(){
         return this.parentForm.get("instalDate");
+    }
+
+    get customerId(){
+        return this.parentForm.get("customerId");
     }
 }

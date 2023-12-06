@@ -10,6 +10,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { AdminCustomerUpdateComponent } from './modules/admin/admin-customer-update/admin-customer-update.component';
 import { AdminCustomerAddComponent } from './modules/admin/admin-customer-add/admin-customer-add.component';
 import { CustomerDetailsComponent } from './modules/customer-details/customer-details.component';
+import { AdminAcunitUpdateComponent } from './modules/admin/admin-acunit-update/admin-acunit-update.component';
 import { AdminAcunitAddComponent } from './modules/admin/admin-acunit-add/admin-acunit-add.component';
 
 const routes: Routes = [
@@ -27,7 +28,8 @@ const routes: Routes = [
       {path: 'admin/customers', component: AdminCustomerComponent},
       {path: 'admin/customers/update/:id', component: AdminCustomerUpdateComponent},
       {path: 'admin/customers/add', component: AdminCustomerAddComponent},
-      {path: 'admin/acunits/add', component: AdminAcunitAddComponent}
+      {path: 'admin/acunits/update/:id', component: AdminAcunitUpdateComponent},
+      {path: 'admin/acunits/add/:id', component: AdminAcunitAddComponent}
     ]
   }
 ];

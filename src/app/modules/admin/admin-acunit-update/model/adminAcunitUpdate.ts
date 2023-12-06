@@ -2,6 +2,7 @@ export interface AdminAcunitUpdate {
     id: number,
     model: string,
     power: number,
-    serial: string,
-    instalDate: string
+    serialNumber: string,
+    instalDate: string,
+    customerId: number
 }
