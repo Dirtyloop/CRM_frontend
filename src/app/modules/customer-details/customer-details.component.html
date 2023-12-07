@@ -32,6 +32,15 @@
                     {{customer.inspected}}
                 </div>
             </div>
+
+            <div>
+              <div *ngFor="let acunit of customer.acUnits" class="acunits">
+                <div>Model: {{acunit.model}}</div>
+                <div>Power: {{acunit.power}}</div>
+                <div>Serial Number: {{acunit.serialNumber}}</div>
+                <div>Instalation Date: {{acunit.instalDate}}</div>
+              </div>
+            </div>
         </mat-card-content>
 
         <!-- <div class="example-container mat-elevation-z8">

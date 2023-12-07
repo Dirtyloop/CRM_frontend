@@ -1,3 +1,6 @@
+import { Acunit } from "./acunit";
+
+
 export interface CustomerDetails {
     id: number,
     name: string,
@@ -7,5 +10,6 @@ export interface CustomerDetails {
     postalCode: string,
     city: string,
     units: number,
-    inspected: string
+    inspected: string,
+    acUnits: Array<Acunit>
 }
