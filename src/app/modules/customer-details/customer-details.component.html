@@ -1,86 +1,41 @@
-<h1>Customer</h1>
-  
-    <div class="customer_info">
-        
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <div>
-            <mat-card-title>Name: {{customer.name}}</mat-card-title>
-            <mat-card-subtitle>Id: {{customer.id}}</mat-card-subtitle>
-            </div>
-        </mat-card-header>
-        
-        <mat-card-content>
-            <div class="address">
-                <div class="bigText">
-                    City: {{customer.city}}
-                </div>
-            </div>
-            <div class="airConNumber">
-                <div class="littleText">
-                    Air-conditioners
-                </div>
-                <div class="bigText">
-                    {{customer.units}}
-                </div>
-            </div>
-            <div class="inspected">
-                <div class="littleText">
-                    Inspected
-                </div>
-                <div class="bigText">
-                    {{customer.inspected}}
-                </div>
-            </div>
+<h1>Customer details</h1>
 
-            <div>
-              <div *ngFor="let acunit of customer.acUnits" class="acunits">
-                <div>Model: {{acunit.model}}</div>
-                <div>Power: {{acunit.power}}</div>
-                <div>Serial Number: {{acunit.serialNumber}}</div>
-                <div>Instalation Date: {{acunit.instalDate}}</div>
-              </div>
-            </div>
-        </mat-card-content>
+<div class="customerInfo">
 
-        <!-- <div class="example-container mat-elevation-z8">
-            
-            <div class="example-table-container">
-          
-              <table mat-table [dataSource]="dataSource" class="example-table"
-                     matSort matSortActive="id" matSortDisableClear matSortDirection="asc">
-        
-                <ng-container matColumnDef="model">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header disableClear class="idClass">Model</th>
-                  <td mat-cell *matCellDef="let element">{{element.model}}</td>
-                </ng-container>
-          
-                <ng-container matColumnDef="power">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="nameClass">Power</th>
-                  <td mat-cell *matCellDef="let element">{{element.power}}</td>
-                </ng-container>
-        
-                <ng-container matColumnDef="serial">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="cityClass">Serial Number</th>
-                  <td mat-cell *matCellDef="let element">{{element.serial}}</td>
-                </ng-container>
-          
-                <ng-container matColumnDef="instalDate">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header class="inspectedClass">Instal Date</th>
-                  <td mat-cell *matCellDef="let element">{{element.instalDate}}</td>
-                </ng-container>
-        
-        
-          
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-              </table>
-            </div>
-          
-            <mat-paginator 
-            [length]="totalElements" 
-            [pageSize]="10"
-            [pageSizeOptions]="[5, 10, 20]"
-            showFirstLastButtons
-            aria-label="Select page of customers"></mat-paginator>
-          </div> -->
+  <div class="personalInfo">
+
+    <div class="example-header-image">
+      <img src='../../../assets/header-image-placeholder.png'>
+    </div>
+
+    <div class="bigText">Id: {{customer.id}}</div>
+    <div class="bigText">Name: {{customer.name}}</div>
+
+    <div class="address">
+      <div class="bigText">
+        City: {{customer.city}}<br>
+        Street: {{customer.street}}
+      </div>
+    </div>
+    <div class="airConNumber">
+      <div class="bigText">
+        Units no.: {{customer.units}}
+      </div>
+    </div>
+    <div class="inspected">
+      <div class="bigText">
+        Inspected: {{customer.inspected}}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="acunitsList">
+    <div *ngFor="let acunit of customer.acUnits" class="acunit">
+      <div>Model: {{acunit.model}}</div>
+      <div>Power: {{acunit.power}}</div>
+      <div>Serial Number: {{acunit.serialNumber}}</div>
+      <div>Instalation Date: {{acunit.instalDate}}</div>
+    </div>
+  </div>
+</div>
